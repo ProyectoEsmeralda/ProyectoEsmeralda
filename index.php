@@ -1,5 +1,12 @@
+<?php session_start();
+  if(!isset($_SESSION['usuario'])){
+    header("location:index.php");
+  }  
+
+?>
+
+
 <!DOCTYPE html>
-<!-- Created By CodingNepal -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
