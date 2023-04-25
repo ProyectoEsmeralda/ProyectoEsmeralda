@@ -411,3 +411,7 @@ footer{
         line-height: 38px;
     }
 }
+
+.par{
+    justify-content: right;
+}

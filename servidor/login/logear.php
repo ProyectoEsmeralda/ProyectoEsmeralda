@@ -6,7 +6,7 @@
     $Auth = new Auth();
 
     if($Auth->logear($usuario, $password)){
-        header("location:../../index.php");
+        header("location:../../indexadministrador.php");
     }else{
         echo "No se pudo logear";
     }

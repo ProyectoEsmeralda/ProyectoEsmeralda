@@ -3,7 +3,7 @@
 
         public $servidor = 'localhost';
         public $usuario = 'root';
-        public $password = 'casapibe1';
+        public $password = '';
         public $database = 'loginpoo2023';
         public $port = 3306; 
         public function conectar(){

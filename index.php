@@ -1,9 +1,3 @@
-<?php session_start();
-  if(!isset($_SESSION['usuario'])){
-    header("location:index.php");
-  }  
-
-?>
 
 
 <!DOCTYPE html>
@@ -39,7 +33,8 @@
                 <li><a href="index.html" class="nav-link">Inicio</a></li>
                 <li><a href="room/rooms.html" class="nav-link">Habitaciones</a></li>
                 <li><a href="#" class="nav-link">Contactanos</a></li>
-                <li><a href="#" class="nav-link">Registro</a></li>
+                <li><a href="inicio.php" class="nav-link">Registro</a></li>
+                <li><i class="fa-regular fa-user"></i></li>
             </ul>
            
         </div>
@@ -77,8 +72,8 @@
             <div class="heading">
               <h5>Una experiencia de altura</h5>
               <h2>Bienvenido al hotel Esmeralda</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <p class="par">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+              <p class="par">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
               <button class="btn1">SOBRE NOSOTROS</button>
             </div>
           </div>
