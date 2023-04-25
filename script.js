@@ -35,14 +35,14 @@ $(document).ready(function(){
 
     // typing text animation script
     var typed = new Typed(".typing", {
-        strings: ["YouTuber", "Developer", "Blogger", "Designer", "Freelancer"],
+        strings: ["única", "magistral", "real", "gloriosa"],
         typeSpeed: 100,
         backSpeed: 60,
         loop: true
     });
 
     var typed = new Typed(".typing-2", {
-        strings: ["YouTuber", "Developer", "Blogger", "Designer", "Freelancer"],
+        strings: ["única", "magistral", "real", "gloriosa"],
         typeSpeed: 100,
         backSpeed: 60,
         loop: true
@@ -71,3 +71,33 @@ $(document).ready(function(){
         }
     });
 });
+
+//header
+function img(anything) {
+    document.querySelector('.slide').src = anything;
+  }
+  
+  function change(change) {
+    const line = document.querySelector('.image');
+    line.style.background = change;
+  }
+  
+  //carusel
+  $('.owl-carousel').owlCarousel({
+      loop: true,
+      margin: 10,
+      nav: true,
+      dots: false,
+      navText: ["<i class='fas fa-chevron-left'></i>", "<i class='fas fa-chevron-right'></i>"],
+      responsive: {
+        0: {
+          items: 1
+        },
+        768: {
+          items: 2
+        },
+        1000: {
+          items: 4
+        }
+      }
+    })
