@@ -81,7 +81,7 @@ a {
   content: '';
   width: 100px;
   height: 4px;
-  background: #239089;
+  background: #0a6761;
 }
 
 .heading h5 {
@@ -110,7 +110,7 @@ a {
 }
 
 .btn1 {
-  background: #239089;
+  background: #0a6761;
   color: white;
 }
 
@@ -151,6 +151,11 @@ a {
 /*--------------map--------*/
 .map iframe {
   width: 100%;
+}
+
+.par{
+  text-align: justify;
+  font-size: 20px;
 }
 
 /*--------------map--------*/

@@ -27,14 +27,15 @@
     </div>
     <nav class="navbar">
         <div class="max-width">
+            <li><a href="#"><img src="image/logo.svg" class="brand"></a></li>
             <li><a href="#" class="nav-link">HOTEL ESMERALDA</a></li>
 
             <ul class="menu">              
                 <li><a href="index.html" class="nav-link">Inicio</a></li>
                 <li><a href="room/rooms.html" class="nav-link">Habitaciones</a></li>
                 <li><a href="#" class="nav-link">Contactanos</a></li>
-                <li><a href="inicio.php" class="nav-link">Registro</a></li>
-                <li><i class="fa-regular fa-user"></i></li>
+                <li><a href="registro.php" class="nav-link">Registro</a></li>
+                <li><a href="inicio.php" class="nav-link">Sesión</a></i></li>
             </ul>
            
         </div>
@@ -44,18 +45,18 @@
         <div class="head_container">
           <div class="box">
             <div class="text">
-              <h1>Hotel Esmeralda</h1>
+              <h1 class="text-1">Hotel Esmeralda</h1>
               <p>Vive una experiencia <span class="typing"></span></p>           
             </div>
           </div>
           <div class="image">
-            <img src="imagenes/comedor.jpg" class="slide">
+            <img src="imagenes/room.jpg" class="slide">
           </div>
           <div class="image_item">
-            <img src="imagenes/comedor.jpg" alt="" class="slide active" onclick="img('imagenes/comedor.jpg')">
+            <!-- <img src="imagenes/comedor.jpg" alt="" class="slide active" onclick="img('imagenes/comedor.jpg')">
             <img src="imagenes/imagen1.gif" alt="" class="slide" onclick="img('imagenes/imagen1.gif')">
             <img src="imagenes/imagen3.jpg" alt="" class="slide" onclick="img('imagenes/imagen3.jpg')">
-            <img src="imagenes/imagen4.gif" alt="" class="slide" onclick="img('imagenes/imagen4.gif')">
+            <img src="imagenes/imagen4.gif" alt="" class="slide" onclick="img('imagenes/imagen4.gif')"> -->
           </div>
         </div>      
       </section>
@@ -65,15 +66,15 @@
         <div class="container flex">
           <div class="left">
             <div class="img">
-              <img src="image/a1.jpg" alt="" class="image1">
+              <img src="imagenes/comedor.jpg" alt="" class="image1">
             </div>
           </div>
           <div class="right">
             <div class="heading">
               <h5>Una experiencia de altura</h5>
-              <h2>Bienvenido al hotel Esmeralda</h2>
-              <p class="par">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-              <p class="par">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <h2>¡Bienvenid@ al hotel Esmeralda!</h2>
+              <p class="par">Nuestro hotel cuenta con habitaciones cómodas con altos estándares en el cuidado de la atención a nuestros huéspedes. Además de estar estratégicamente ubicados para su traslado tanto al aeropuerto internacional de El Alto así como hacia la terminal de buses de El Alto evitando posibles complicaciones de retraso en su viaje.</p>
+              <p class="par">Nuestras habitaciones cuentan con diferentes comodidades desde modernos yacuzzis, frigobares, baños privados e incluso nuestro propio servicio de contenido streaming con contenido seleccionado para su disfrute.</p>
               <button class="btn1">SOBRE NOSOTROS</button>
             </div>
           </div>
@@ -138,28 +139,28 @@
     
           <div class="owl-carousel owl-theme">
             <div class="item">
-              <img src="image/g1.jpg" alt="">
+              <img src="imagenes/imagen1.gif" alt="">
             </div>
             <div class="item">
-              <img src="image/g2.jpg" alt="">
+              <img src="imagenes/room.jpg" alt="">
             </div>
             <div class="item">
-              <img src="image/g3.jpg" alt="">
+              <img src="imagenes/imagen3.jpg" alt="">
             </div>
             <div class="item">
-              <img src="image/g4.jpg" alt="">
+              <img src="imagenes/prev.png" alt="">
             </div>
             <div class="item">
-              <img src="image/g5.jpg" alt="">
+              <img src="imagenes/comedor.jpg" alt="">
             </div>
             <div class="item">
-              <img src="image/g6.jpg" alt="">
+              <img src="imagenes/room.jpg" alt="">
             </div>
             <div class="item">
-              <img src="image/g7.jpg" alt="">
+              <img src="imagenes/descarga (2).jpg" alt="">
             </div>
             <div class="item">
-              <img src="image/g8.jpg" alt="">
+              <img src="imagenes/imagen.jpg" alt="">
             </div>
           </div>
           <center>
@@ -197,7 +198,7 @@
               <h3>Comuniquese con nosotros</h3>   
               <ul>
                 <li><i class="far fa-envelope"></i> info@esmeralda-hotel.com</li>
-                <li><i class="far fa-phone-alt"></i> +591.63080099</li>
+                <li><i class="far fa-phone-alt"></i> +591 63080099</li>
               </ul>
             </div>
           </div>
