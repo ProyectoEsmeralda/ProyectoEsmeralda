@@ -1,3 +1,10 @@
+<?php session_start();
+  if(!isset($_SESSION['usuario'])){
+    header("location:index.php");
+  }  
+
+?>
+
 
 
 <!DOCTYPE html>
@@ -20,6 +27,9 @@
     referrerpolicy="no-referrer"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"
     referrerpolicy="no-referrer"></script>
+
+    
+
 </head>
 <body>
     <div class="scroll-up-btn">
@@ -32,191 +42,19 @@
 
             <ul class="menu">              
                 <li><a href="index.html" class="nav-link">Inicio</a></li>
-                <li><a href="room/rooms.html" class="nav-link">Habitaciones</a></li>
-                <li><a href="#" class="nav-link">Contactanos</a></li>
-                <li><a href="#" id="login-btn2">Registro</a></li>
-                <li><a href="#" id="login-btn">Iniciar sesión</a></li>
-                
+                <li><a href="room/rooms.html" class="nav-link">Habitaciones</a></li> 
             </ul>
-           
+            <li class="nav-item dropdown">
+                <a style="color:red" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <?php echo $_SESSION['usuario'];?>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="servidor/login/logout.php">Salir del sistema</a></li>
+                </ul>
+            </li>
         </div>
     </nav>
-    
-    <div id="login-form">
-      <h2>Iniciar sesión</h2>
-      <form action="servidor/login/logear.php" method="post">
-        <label for="usuario">Usuario:</label>
-        <input type="text" name="usuario" id="usuario" placeholder="Usuario" required autofocus>
-        <label for="password">Contraseña:</label>
-        <input type="password" class="form-control" name="password" id="password" placeholder="Contraseña" required>
-        <input type="submit" value="Iniciar sesión">
-      </form>
-    </div>
-    
-<!----------------------->
-    <div id="login-form2">
-          <h2>Registrate</h2>
-          <form action = "servidor/registro/registrar.php" method="post">
-            <label for="usuario">Usuario:</label>
-            <input type="text" class="form-control" id="usuario" name="usuario" placeholder="usuario" required autofocus>
-            <label for="password">Contraseña:</label>
-            <input type="password" class="form-control" id="password" name="password"placeholder="Contraseña" required>
-            <input type="submit" value="Registrarse">
-          </form>
-    </div>
-<!----------------------->
 
-
-<style>
-  #login-form {
-  display: none;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #fff;
-  padding: 40px;
-  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
-  z-index: 999;
-  width: 400px;
-  height: 400px;
-  border-radius: 10px;
-  background: linear-gradient(to bottom right, #fff, #f1f1f1);
-  border: 1px solid #ccc;
-}
-
-#login-form h2 {
-  margin-top: 0;
-  font-size: 24px;
-  text-align: center;
-}
-
-#login-form label {
-  display: block;
-  margin-bottom: 10px;
-  font-size: 16px;
-}
-
-#login-form input[type="text"],
-#login-form input[type="password"] {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 16px;
-}
-
-#login-form input[type="submit"] {
-  background-color: #0a6761; 
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 16px;
-  display: block;
-  margin: 0 auto;
-}
-  </style>
-  <style>
- #login-form2 {
-  display: none;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #fff;
-  padding: 40px;
-  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
-  z-index: 999;
-  width: 400px;
-  height: 400px;
-  border-radius: 10px;
-  background: linear-gradient(to bottom right, #fff, #f1f1f1);
-  border: 1px solid #ccc;
-}
-
-#login-form2 h2 {
-  margin-top: 0;
-  font-size: 24px;
-  text-align: center;
-}
-
-#login-form2 label {
-  display: block;
-  margin-bottom: 10px;
-  font-size: 16px;
-}
-
-#login-form2 input[type="text"],
-#login-form2 input[type="password"] {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 16px;
-}
-
-#login-form2 input[type="submit"] {
-  background-color: #0a6761; 
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 16px;
-  display: block;
-  margin: 0 auto;
-}
-    </style>
-     <!--script form registro-->
-  <script>
-      const loginBtn = document.getElementById('login-btn');
-      const loginForm = document.getElementById('login-form');
-
-      // Mostrar el formulario de inicio de sesión cuando se hace clic en el botón de inicio de sesión
-      loginBtn.addEventListener('click', function() {
-        loginForm.style.display = 'block';
-      });
-
-      document.addEventListener('click', function(event) {
-        // Comprobar si el evento de clic se ha originado dentro del formulario de inicio de sesión
-        const isClickInsideForm = loginForm.contains(event.target);
-        // Si el clic se ha realizado fuera del formulario, ocultarlo
-        if (!isClickInsideForm && event.target !== loginBtn) {
-          loginForm.style.display = 'none';
-        }
-      });
-    </script>
-
-    <!--script form registro-->
-    <script>
-            const loginBtn2 = document.getElementById('login-btn2');
-      const loginForm2 = document.getElementById('login-form2');
-
-      // Mostrar el formulario de inicio de sesión cuando se hace clic en el botón de inicio de sesión
-      loginBtn2.addEventListener('click', function() {
-        loginForm2.style.display = 'block';
-      });
-
-      document.addEventListener('click', function(event) {
-        // Comprobar si el evento de clic se ha originado dentro del formulario de inicio de sesión
-        const isClickInsideForm = loginForm2.contains(event.target);
-        // Si el clic se ha realizado fuera del formulario, ocultarlo
-        if (!isClickInsideForm && event.target !== loginBtn2) {
-          loginForm2.style.display = 'none';
-        }
-      });
-    </script>
-
-    
-
-    
-    
     <section class="home" >
         <div class="head_container">
           <div class="box">

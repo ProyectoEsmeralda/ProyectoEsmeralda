@@ -4,7 +4,7 @@
     class Auth extends Conexion {
         public function registrar($usuario, $password){
             $conexion = parent::conectar();
-            $sql = "INSERT INTO t_usuarios (usuario, password)
+            $sql = "INSERT INTO usuarios (usuario, password)
                     VALUES (?,?)";
             $query = $conexion->prepare($sql);
             $query->bind_param('ss', $usuario, $password);
@@ -14,7 +14,7 @@
         public function logear($usuario, $password){
             $conexion = parent::conectar();
             $passwordExistente = "";
-            $sql = "SELECT * FROM t_usuarios
+            $sql = "SELECT * FROM usuarios
                     WHERE usuario = '$usuario'";
             $respuesta = mysqli_query($conexion, $sql);
             $passwordExistente = mysqli_fetch_array($respuesta)['password'];
