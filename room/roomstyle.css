@@ -7,7 +7,7 @@
     font-family: "Poppins", sans-serif;
   }
   body {
-    background-color: #f5f8ff;
+    background-color: #c5ede6;
   }
   .wrapper {
     width: 95%;
@@ -19,30 +19,30 @@
   #search-container input {
     background-color: transparent;
     width: 40%;
-    border-bottom: 2px solid #110f29;
+    border-bottom: 2px solid #0a6761;
     padding: 1em 0.3em;
   }
   #search-container input:focus {
-    border-bottom-color: #6759ff;
+    border-bottom-color: #0ca59d;
   }
   #search-container button {
     padding: 1em 2em;
     margin-left: 1em;
-    background-color: #6759ff;
+    background-color: #0ca59d;
     color: #ffffff;
     border-radius: 5px;
     margin-top: 0.5em;
   }
   .button-value {
-    border: 2px solid #6759ff;
+    border: 2px solid #0ca59d;
     padding: 1em 2.2em;
     border-radius: 3em;
     background-color: transparent;
-    color: #6759ff;
+    color: #0ca59d;
     cursor: pointer;
   }
   .active {
-    background-color: #6759ff;
+    background-color: #0ca59d;
     color: #ffffff;
   }
   #products {
@@ -69,7 +69,7 @@
   }
   .container {
     padding-top: 1em;
-    color: #110f29;
+    color: #0a6761;
   }
   .container h5 {
     font-weight: 500;
